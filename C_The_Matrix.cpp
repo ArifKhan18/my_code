@@ -22,23 +22,19 @@
 using namespace std;
 void solve()
 {
-    ll x;
-    cin >> x;
-    for (ll i = 1;; i++)
+    ll a, b;
+    cin >> a >> b;
+    if (abs(a) == abs(b))
     {
-        if (i % 3 == 0 or i % 10 == 3)
-        {
-            continue;
-        }
-        else
-        {
-            --x;
-            if (x == 0)
-            {
-                cout << i << nn;
-                break;
-            }
-        }
+        cout << "=" << nn;
+    }
+    else if (abs(a) < abs(b))
+    {
+        cout << "<" << nn;
+    }
+    else if (abs(a) > abs(b))
+    {
+        cout << ">" << nn;
     }
 }
 int main()

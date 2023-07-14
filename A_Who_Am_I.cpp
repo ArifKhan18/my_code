@@ -22,33 +22,18 @@
 using namespace std;
 void solve()
 {
-    ll x;
-    cin >> x;
-    for (ll i = 1;; i++)
-    {
-        if (i % 3 == 0 or i % 10 == 3)
-        {
-            continue;
-        }
-        else
-        {
-            --x;
-            if (x == 0)
-            {
-                cout << i << nn;
-                break;
-            }
-        }
-    }
+    ll a, b;
+    while (cin >> a >> b)
+        cout << abs(b - a) << nn;
 }
 int main()
 {
     code();
-    ll test;
-    cin >> test;
-    while (test--)
-    {
-        solve();
-    }
+    // ll test;
+    // cin >> test;
+    // while (test--)
+    // {
+    solve();
+    // }
     return 0;
 }

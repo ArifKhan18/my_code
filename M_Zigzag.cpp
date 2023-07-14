@@ -22,33 +22,43 @@
 using namespace std;
 void solve()
 {
-    ll x;
-    cin >> x;
-    for (ll i = 1;; i++)
+    ll n;
+    cin >> n;
+    ll a[n];
+    // set<ll> s;
+    for (ll i = 0; i < n; i++)
     {
-        if (i % 3 == 0 or i % 10 == 3)
+        cin >> a[i];
+        // s.insert(a[i]);
+    }
+    // sort(a, a + n);
+    ll mx = 0;
+    ll cnt = 0;
+    for (ll i = 0; i < n; i++)
+    {
+        for (ll j = 0; j < n; j++)
         {
-            continue;
-        }
-        else
-        {
-            --x;
-            if (x == 0)
+            if (a[i] > a[j] or a[i] < a[j])
             {
-                cout << i << nn;
-                break;
+                cnt++;
+                mx = max(mx, cnt);
+            }
+            else
+            {
+                cnt = 0;
             }
         }
     }
+    cout << mx;
 }
 int main()
 {
     code();
-    ll test;
-    cin >> test;
-    while (test--)
-    {
-        solve();
-    }
+    // ll test;
+    // cin >> test;
+    // while (test--)
+    // {
+    solve();
+    // }
     return 0;
 }

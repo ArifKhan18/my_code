@@ -22,33 +22,34 @@
 using namespace std;
 void solve()
 {
-    ll x;
-    cin >> x;
-    for (ll i = 1;; i++)
+    string s;
+    cin >> s;
+    ll f = 0;
+    for (ll i = 0; i < s.size(); i++)
     {
-        if (i % 3 == 0 or i % 10 == 3)
+        if (s[i] == '7' or s[i] == '4')
         {
-            continue;
+            f++;
         }
-        else
-        {
-            --x;
-            if (x == 0)
-            {
-                cout << i << nn;
-                break;
-            }
         }
+    if (f == 4 || f == 7 && f != 0)
+    {
+        yes
+    }
+    else
+    {
+        no
     }
 }
 int main()
 {
     code();
-    ll test;
-    cin >> test;
-    while (test--)
-    {
-        solve();
-    }
+    // ll test;
+    // cin >> test;
+    // while (test--)
+    // {
+    solve();
+    //
+
     return 0;
 }

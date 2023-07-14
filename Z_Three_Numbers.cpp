@@ -20,35 +20,33 @@
     cin.tie(0);                   \
     cout.tie(0)
 using namespace std;
+void oc(ll n)
+{
+    int octal[100];
+    ll i = 0;
+    while (n != 0)
+    {
+        octal[i] = n % 8;
+        n = n / 8;
+        i++;
+    }
+    for (int j = i - 1; j >= 0; j--)
+        cout << octal[j];
+}
 void solve()
 {
-    ll x;
-    cin >> x;
-    for (ll i = 1;; i++)
-    {
-        if (i % 3 == 0 or i % 10 == 3)
-        {
-            continue;
-        }
-        else
-        {
-            --x;
-            if (x == 0)
-            {
-                cout << i << nn;
-                break;
-            }
-        }
-    }
+    ll a, b;
+    cin >> a >> b;
+    oc(a + b);
 }
 int main()
 {
     code();
-    ll test;
-    cin >> test;
-    while (test--)
-    {
-        solve();
-    }
+    // ll test;
+    // cin >> test;
+    // while (test--)
+    // {
+    solve();
+    //}
     return 0;
 }

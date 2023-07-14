@@ -22,22 +22,14 @@
 using namespace std;
 void solve()
 {
-    ll x;
-    cin >> x;
-    for (ll i = 1;; i++)
+    ll n, m;
+    cin >> n >> m;
+    char s[n][m];
+    for (ll i = 0; i < n; i++)
     {
-        if (i % 3 == 0 or i % 10 == 3)
+        for (ll j = 0; j < m; j++)
         {
-            continue;
-        }
-        else
-        {
-            --x;
-            if (x == 0)
-            {
-                cout << i << nn;
-                break;
-            }
+            cin >> s[i][j];
         }
     }
 }
