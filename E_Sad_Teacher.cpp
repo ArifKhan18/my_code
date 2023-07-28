@@ -20,18 +20,11 @@
 using namespace std;
 void solve()
 {
-    ll days, years, month;
-
-    ll N;
-    cin >> N;
-
-    years = N / 365;
-    month = (N % 365) / 30;
-    days = (N % 365) % 30;
-
-    cout << years << " years" << nn;
-    cout << month << " months" << nn;
-    cout << days << " days" << nn;
+    ll a, b;
+    while (cin >> a >> b)
+    {
+        cout << a + b << nn;
+    }
 }
 int main()
 {

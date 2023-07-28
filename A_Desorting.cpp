@@ -20,27 +20,39 @@
 using namespace std;
 void solve()
 {
-    ll days, years, month;
-
-    ll N;
-    cin >> N;
-
-    years = N / 365;
-    month = (N % 365) / 30;
-    days = (N % 365) % 30;
-
-    cout << years << " years" << nn;
-    cout << month << " months" << nn;
-    cout << days << " days" << nn;
+    ll x;
+    cin >> x;
+    ll y[x];
+    ll ans = 0;
+    for (ll i = 0; i < x; i++)
+    {
+        cin >> y[i];
+    }
+    for (ll i = 0; i < x; i++)
+    {
+        ans = y[x - 1] - y[x - 2];
+    }
+    // if (ans == 0)
+    // {
+    //     cout << "1" << nn;
+    // }
+    // else if (ans < 0)
+    // {
+    //     cout << "0" << nn;
+    // }
+    // else
+    // {
+    cout << abs(ceil((double)(ans + 1) / 2)) << nn;
+    // }
 }
 int main()
 {
     code();
-    // ll test;
-    // cin >> test;
-    // while (test--)
-    // {
-    solve();
-    // }
+    ll test;
+    cin >> test;
+    while (test--)
+    {
+        solve();
+    }
     return 0;
 }

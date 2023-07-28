@@ -32,41 +32,19 @@ void solve()
         cin >> y[i];
     }
 
-    unordered_map<ll, ll> mp;
-    for (int i = 0; i < x; i++)
+    set<ll> s;
+    ll ans = 0;
+    for (ll i = 0; i < x; i++)
     {
-        mp[y[i]]++;
-    }
-
-    // Remove elements with a frequency of 2
-    for (auto it = mp.begin(); it != mp.end();)
-    {
-        if (it->second == 2)
+        if (s.count(y[i]))
         {
-            it = mp.erase(it);
+            s.erase(y[i]);
         }
         else
-        {
-            ++it;
-        }
+            s.insert(y[i]);
+        ans = max(ans, (ll)s.size());
     }
-
-    // Calculate the size of the resulting array
-    ll array_size = 0;
-    for (auto &entry : mp)
-    {
-        array_size += entry.second;
-    }
-
-    // Print the array size or array size divided by 2
-    if (array_size == 0)
-    {
-        cout << x / 2 << nn;
-    }
-    else
-    {
-        cout << array_size << nn;
-    }
+    cout << ans << nn;
 }
 
 int main()
