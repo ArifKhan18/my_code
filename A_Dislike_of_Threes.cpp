@@ -24,7 +24,7 @@ void solve()
 {
     ll x;
     cin >> x;
-    for (ll i = 1;; i++)
+    for (ll i = 1; i <= 1666; i++)
     {
         if (i % 3 == 0 or i % 10 == 3)
         {
@@ -32,7 +32,7 @@ void solve()
         }
         else
         {
-            --x;
+            x--;
             if (x == 0)
             {
                 cout << i << nn;
@@ -51,4 +51,33 @@ int main()
         solve();
     }
     return 0;
+}
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        for(int i=0; i<=1666; i++)
+        {
+            if(n%3==0 || n%10==3)
+            {
+                continue;
+            }
+            else
+            {
+                n--;
+                if(n==0)
+                {
+                    cout<<i<<endl;
+                    break;
+                }
+
+            }
+        }
+    }
 }
