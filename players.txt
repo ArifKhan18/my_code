@@ -1,0 +1,6 @@
+arif,20,2
+anisa,20,3
+miraz,50,30
+miraz,20,60
+kk 99 09 98
+ll,90,89

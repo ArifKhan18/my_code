@@ -7,8 +7,8 @@
 #include <bits/stdc++.h>
 #define nn "\n"
 #define ll long long
-#define yes cout << "YES\n";
-#define no cout << "NO\n";
+#define yes cout << "Yes\n";
+#define no cout << "No\n";
 #define sp " "
 #define asort(a) sort(a.begin(), a.end())
 #define point(a) fixed << setprecision(a)
@@ -20,28 +20,36 @@
 using namespace std;
 void solve()
 {
-    ll x, y, z = 0;
-    ll a[5][5];
-    for (ll i = 0; i < 5; i++)
+    ll a, b, sum1 = 0, sum2 = 0;
+    cin >> a >> b;
+    ll x[a];
+    ll y[b];
+    for (ll i = 0; i < a; i++)
     {
-        for (ll j = 0; j < 5; j++)
-        {
-            cin >> a[i][j];
-        }
+        cin >> x[i];
     }
-    for (ll i = 0; i < 5; i++)
+    for (ll i = 0; i < b; i++)
     {
-        for (ll j = 0; j < 5; j++)
-        {
-            if (a[i][j] == 1)
-            {
-                x = i;
-                y = j;
-            }
-        }
+        cin >> y[i];
     }
-    z = abs(x - 2) + abs(y - 2);
-    cout << z << endl;
+    sort(x, x + a);
+    sort(y, y + b);
+    for (ll i = 0; i < a; i++)
+    {
+        sum1 += x[i];
+    }
+    for (ll i = 0; i < b; i++)
+    {
+        sum2 += y[i];
+    }
+    if (sum1 == sum2)
+    {
+        yes
+    }
+    else
+    {
+        no
+    }
 }
 int main()
 {
@@ -51,6 +59,6 @@ int main()
     // while (test--)
     // {
     solve();
-    // }
+    //}
     return 0;
 }

@@ -1,11 +1,9 @@
-/*********************************************************************
-**                Bismillahir Rahmanir Rahim                        **
-**                                                                  **
-**                                                                  **
-**     Author: MD. ARIF KHAN                                        **
-**     Bangladesh University of Business and Technology,(BUBT)      **
-**     Department of Computer Science And Engineering               **
-*********************************************************************/
+/*
+**  Bismillahir Rahmanir Rahim
+**  Author: MD. ARIF KHAN
+**  Bangladesh University of Business and Technology,(BUBT)
+**  Department of Computer Science And Engineering
+*/
 #include <bits/stdc++.h>
 #define nn "\n"
 #define ll long long
@@ -22,44 +20,29 @@
 using namespace std;
 void solve()
 {
-    string arr[] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
-    ll a, b, c;
-    string s;
-    int arr2[5] = {0};
-    cin >> a >> b >> c >> s;
-    for (int i = 0; i < 5; i++)
+    ll x;
+    cin >> x;
+    ll y[x];
+    for (ll i = 0; i < x; i++)
     {
-        if (s == arr[i])
-        {
-            arr2[i]++;
-        }
+        cin >> y[i];
     }
-    ll x, y, z;
-    cin >> x >> y >> z;
-    ll day1 = a * 360;
-    ll day2 = b * 30;
-    ll day3 = c;
-    ll total1 = (day1 + day2 + day3);
-    ll day4 = x * 360;
-    ll day5 = y * 30;
-    ll day6 = z;
-    ll total2 = (day4 + day5 + day6);
-    ll diff = abs(total1 - total2);
-    ll rem = diff % 5;
-    for (int i = 0; i < 5; i++)
+    set<ll> s;
+    for (ll i = 0; i < x; i++)
     {
-        cout << arr2[i];
+        s.insert(y[i]);
     }
-    cout << rem << arr[rem] << nn;
+    ll q = s.size();
+    cout << q << nn;
 }
 int main()
 {
     code();
-    ll test;
-    cin >> test;
-    while (test--)
-    {
-        solve();
-    }
+    // ll test;
+    // cin >> test;
+    // while (test--)
+    // {
+    solve();
+    // }
     return 0;
 }

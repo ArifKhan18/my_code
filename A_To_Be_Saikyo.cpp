@@ -4,7 +4,7 @@
 **  Bangladesh University of Business and Technology,(BUBT)
 **  Department of Computer Science And Engineering
 */
-#include <bits/stdc++.h>
+#include <iostream>
 #define nn "\n"
 #define ll long long
 #define yes cout << "YES\n";
@@ -20,28 +20,42 @@
 using namespace std;
 void solve()
 {
-    ll x, y, z = 0;
-    ll a[5][5];
-    for (ll i = 0; i < 5; i++)
+    ll x;
+    cin >> x;
+    ll y[x];
+    for (ll i = 0; i < x; i++)
     {
-        for (ll j = 0; j < 5; j++)
+        cin >> y[i];
+    }
+    ll ma = y[0];
+    ll in;
+    for (ll i = 0; i < x; i++)
+    {
+        if (y[i] > ma)
         {
-            cin >> a[i][j];
+            ma = y[i];
+            in = i;
         }
     }
-    for (ll i = 0; i < 5; i++)
+    for (ll i = 0; i < x; i++)
     {
-        for (ll j = 0; j < 5; j++)
+        if (y[in] - y[in - 1] < 0)
         {
-            if (a[i][j] == 1)
-            {
-                x = i;
-                y = j;
-            }
+            cout << "1" << nn;
+            return;
+        }
+        else if (y[i] == y[i + 1])
+        {
+            cout << "1" << nn;
+            return;
+        }
+
+        else if (y[in] > y[in - 1])
+        {
+            cout << (y[in] - y[in - 1]) + 1 << nn;
+            return;
         }
     }
-    z = abs(x - 2) + abs(y - 2);
-    cout << z << endl;
 }
 int main()
 {

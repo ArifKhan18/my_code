@@ -18,30 +18,23 @@
     cin.tie(0);                   \
     cout.tie(0)
 using namespace std;
+char Al(char ch)
+{
+    if (ch == 'z')
+    {
+        return 'a';
+    }
+    else
+    {
+        return ch + 1;
+    }
+}
 void solve()
 {
-    ll x, y, z = 0;
-    ll a[5][5];
-    for (ll i = 0; i < 5; i++)
-    {
-        for (ll j = 0; j < 5; j++)
-        {
-            cin >> a[i][j];
-        }
-    }
-    for (ll i = 0; i < 5; i++)
-    {
-        for (ll j = 0; j < 5; j++)
-        {
-            if (a[i][j] == 1)
-            {
-                x = i;
-                y = j;
-            }
-        }
-    }
-    z = abs(x - 2) + abs(y - 2);
-    cout << z << endl;
+    char x;
+    cin >> x;
+    char ne = Al(x);
+    cout << ne << nn;
 }
 int main()
 {

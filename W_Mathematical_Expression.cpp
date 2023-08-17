@@ -20,28 +20,42 @@
 using namespace std;
 void solve()
 {
-    ll x, y, z = 0;
-    ll a[5][5];
-    for (ll i = 0; i < 5; i++)
+    ll x, y, z;
+    char a, b;
+    cin >> x >> a >> y >> b >> z;
+    if (a == '+')
     {
-        for (ll j = 0; j < 5; j++)
+        if (x + y == z)
         {
-            cin >> a[i][j];
+            cout << "Yes" << nn;
+        }
+        else
+        {
+            cout << x + y << nn;
         }
     }
-    for (ll i = 0; i < 5; i++)
+    else if (a == '-')
     {
-        for (ll j = 0; j < 5; j++)
+        if (x - y == z)
         {
-            if (a[i][j] == 1)
-            {
-                x = i;
-                y = j;
-            }
+            cout << "Yes" << nn;
+        }
+        else
+        {
+            cout << x - y << nn;
         }
     }
-    z = abs(x - 2) + abs(y - 2);
-    cout << z << endl;
+    if (a == '*')
+    {
+        if (x * y == z)
+        {
+            cout << "Yes" << nn;
+        }
+        else
+        {
+            cout << x * y << nn;
+        }
+    }
 }
 int main()
 {
@@ -51,6 +65,6 @@ int main()
     // while (test--)
     // {
     solve();
-    // }
+    //}
     return 0;
 }

@@ -20,28 +20,27 @@
 using namespace std;
 void solve()
 {
-    ll x, y, z = 0;
-    ll a[5][5];
-    for (ll i = 0; i < 5; i++)
+    ll q, a = 0, b = 0, c = 0;
+    ll x[110], y[110], z[110];
+    cin >> q;
+    for (ll i = 0; i < q; i++)
     {
-        for (ll j = 0; j < 5; j++)
-        {
-            cin >> a[i][j];
-        }
+        cin >> x[i] >> y[i] >> z[i];
     }
-    for (ll i = 0; i < 5; i++)
+    for (ll i = 0; i < q; i++)
     {
-        for (ll j = 0; j < 5; j++)
-        {
-            if (a[i][j] == 1)
-            {
-                x = i;
-                y = j;
-            }
-        }
+        a += x[i];
+        b += y[i];
+        c += z[i];
     }
-    z = abs(x - 2) + abs(y - 2);
-    cout << z << endl;
+    if (a == 0 and b == 0 and c == 0)
+    {
+        yes
+    }
+    else
+    {
+        no
+    }
 }
 int main()
 {

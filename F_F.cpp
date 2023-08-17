@@ -1,11 +1,9 @@
-/*********************************************************************
-**                Bismillahir Rahmanir Rahim                        **
-**                                                                  **
-**                                                                  **
-**     Author: MD. ARIF KHAN                                        **
-**     Bangladesh University of Business and Technology,(BUBT)      **
-**     Department of Computer Science And Engineering               **
-*********************************************************************/
+/*
+**  Bismillahir Rahmanir Rahim
+**  Author: MD. ARIF KHAN
+**  Bangladesh University of Business and Technology,(BUBT)
+**  Department of Computer Science And Engineering
+*/
 #include <bits/stdc++.h>
 #define nn "\n"
 #define ll long long
@@ -22,6 +20,19 @@
 using namespace std;
 void solve()
 {
+    ll w1, w2, x1, x2, m;
+    cin >> w1 >> w2 >> x1 >> x2 >> m;
+    ll ojon = w2 - w1;
+    ll mm1 = m * x1;
+    ll mm2 = m * x2;
+    if (mm1 <= ojon and mm2 >= ojon)
+    {
+        cout << "1" << nn;
+    }
+    else
+    {
+        cout << "0" << nn;
+    }
 }
 int main()
 {

@@ -20,37 +20,35 @@
 using namespace std;
 void solve()
 {
-    ll x, y, z = 0;
-    ll a[5][5];
-    for (ll i = 0; i < 5; i++)
+    ll a, b, c;
+    cin >> a >> b >> c;
+    ll sum1 = a + c;
+    ll sum2 = b + c;
+    if (sum1 == sum2 and c % 2 == 0)
     {
-        for (ll j = 0; j < 5; j++)
-        {
-            cin >> a[i][j];
-        }
+        cout << "Second" << nn;
     }
-    for (ll i = 0; i < 5; i++)
+    if (sum1 == sum2 and c % 2 != 0)
     {
-        for (ll j = 0; j < 5; j++)
-        {
-            if (a[i][j] == 1)
-            {
-                x = i;
-                y = j;
-            }
-        }
+        cout << "First" << nn;
     }
-    z = abs(x - 2) + abs(y - 2);
-    cout << z << endl;
+    else if (sum1 > sum2)
+    {
+        cout << "First" << nn;
+    }
+    else if (sum1 < sum2)
+    {
+        cout << "Second" << nn;
+    }
 }
 int main()
 {
     code();
-    // ll test;
-    // cin >> test;
-    // while (test--)
-    // {
-    solve();
-    // }
+    ll test;
+    cin >> test;
+    while (test--)
+    {
+        solve();
+    }
     return 0;
 }

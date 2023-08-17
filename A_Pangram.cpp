@@ -20,28 +20,35 @@
 using namespace std;
 void solve()
 {
-    ll x, y, z = 0;
-    ll a[5][5];
-    for (ll i = 0; i < 5; i++)
+    ll x;
+    cin >> x;
+    string s;
+    cin >> s;
+    set<char> o;
+    for (ll i = 0; i < s.size(); i++)
     {
-        for (ll j = 0; j < 5; j++)
-        {
-            cin >> a[i][j];
-        }
+        // if (isupper(s[i]))
+        // {
+        //     tolower(s[i]);
+        // }
+        s[i] = toupper(s[i]);
+        o.insert(s[i]);
     }
-    for (ll i = 0; i < 5; i++)
+    // for (auto u : o)
+    // {
+    //     cout << u << sp;
+    // }
+    // cout << nn;
+    ll q = o.size();
+    // cout << q << nn;
+    if (q == 26)
     {
-        for (ll j = 0; j < 5; j++)
-        {
-            if (a[i][j] == 1)
-            {
-                x = i;
-                y = j;
-            }
-        }
+        yes
     }
-    z = abs(x - 2) + abs(y - 2);
-    cout << z << endl;
+    else
+    {
+        no
+    }
 }
 int main()
 {
@@ -51,6 +58,6 @@ int main()
     // while (test--)
     // {
     solve();
-    // }
+    //}
     return 0;
 }

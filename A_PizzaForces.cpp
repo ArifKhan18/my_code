@@ -20,37 +20,39 @@
 using namespace std;
 void solve()
 {
-    ll x, y, z = 0;
-    ll a[5][5];
-    for (ll i = 0; i < 5; i++)
+    ll x, s, m, b;
+    cin >> x;
+    if (x % 2 != 0)
     {
-        for (ll j = 0; j < 5; j++)
-        {
-            cin >> a[i][j];
-        }
+        x = x + 1;
     }
-    for (ll i = 0; i < 5; i++)
+    if (x % 6 == 0)
     {
-        for (ll j = 0; j < 5; j++)
-        {
-            if (a[i][j] == 1)
-            {
-                x = i;
-                y = j;
-            }
-        }
+        s = x / 6;
+        cout << s * 15 << nn;
+        // return;
     }
-    z = abs(x - 2) + abs(y - 2);
-    cout << z << endl;
+    else if (x % 8 == 0)
+    {
+        m = x / 8;
+        cout << m * 20 << nn;
+        // return;
+    }
+    else if (x % 10 == 0)
+    {
+        b = x / 10;
+        cout << b * 25 << nn;
+        // return;
+    }
 }
 int main()
 {
     code();
-    // ll test;
-    // cin >> test;
-    // while (test--)
-    // {
-    solve();
-    // }
+    ll test;
+    cin >> test;
+    while (test--)
+    {
+        solve();
+    }
     return 0;
 }
