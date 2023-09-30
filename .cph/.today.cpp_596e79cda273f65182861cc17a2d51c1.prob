@@ -1,0 +1,1 @@
+{"name":"Local: today","url":"d:\\my_code\\today.cpp","tests":[{"id":1695487433779,"input":"98 + 99","output":"197"},{"id":1695487583464,"input":"100 - 44","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\my_code\\today.cpp","group":"local","local":true}

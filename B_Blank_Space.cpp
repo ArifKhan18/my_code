@@ -37,6 +37,7 @@ void solve()
         else
         {
             ans = max(ans, c);
+            c = ans;
             c = 0;
         }
     }

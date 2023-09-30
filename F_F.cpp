@@ -20,28 +20,43 @@
 using namespace std;
 void solve()
 {
-    ll w1, w2, x1, x2, m;
-    cin >> w1 >> w2 >> x1 >> x2 >> m;
-    ll ojon = w2 - w1;
-    ll mm1 = m * x1;
-    ll mm2 = m * x2;
-    if (mm1 <= ojon and mm2 >= ojon)
+    ll x, c = 0;
+    cin >> x;
+    ll temp = x;
+    while (temp != 0)
     {
-        cout << "1" << nn;
+        temp /= 10;
+        c++;
     }
-    else
+    if (c == 4)
     {
-        cout << "0" << nn;
+        cout << x << nn;
+    }
+    else if (c == 3)
+    {
+        cout << "0" << x << nn;
+    }
+    else if (c == 2)
+    {
+        cout << "00" << x << nn;
+    }
+    else if (c == 1)
+    {
+        cout << "000" << x << nn;
+    }
+    else if (c == 0)
+    {
+        cout << "0000" << nn;
     }
 }
 int main()
 {
     code();
-    ll test;
-    cin >> test;
-    while (test--)
-    {
-        solve();
-    }
+    // ll test;
+    // cin >> test;
+    // while (test--)
+    // {
+    solve();
+    //}
     return 0;
 }

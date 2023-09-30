@@ -37,14 +37,12 @@ void solve()
         if (a[i] + a[x] <= y)
         {
             i++;
-            x--;
             c++;
         }
         else
         {
-            i = 0;
-            x++;
-            c++;
+            x--;
+            //++;
         }
     }
     cout << c << nn;

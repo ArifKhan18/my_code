@@ -20,23 +20,18 @@
 using namespace std;
 void solve()
 {
-    ll x, c = 0;
-    cin >> x;
-    ll y[x];
+    ll x, y, c = 0;
+    cin >> x >> y;
+    ll a[x];
     for (ll i = 0; i < x; i++)
     {
-        cin >> y[i];
+        cin >> a[i];
     }
-    sort(y, y + x);
     for (ll i = 0; i < x; i++)
     {
-        if (y[i] == y[i + 1])
+        if (a[i] < y)
         {
             c++;
-        }
-        else
-        {
-            c = 0;
         }
     }
     cout << c << nn;
@@ -49,6 +44,6 @@ int main()
     // while (test--)
     // {
     solve();
-    // }
+    //}
     return 0;
 }

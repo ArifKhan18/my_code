@@ -12,6 +12,7 @@
 #define sp " "
 #define asort(a) sort(a.begin(), a.end())
 #define point(a) fixed << setprecision(a)
+#define testcase cout << "Case " << i << ": ";
 #define pi 3.1415926535897932384626433832795
 #define code()                    \
     ios_base::sync_with_stdio(0); \
@@ -20,79 +21,35 @@
 using namespace std;
 void solve()
 {
-    string a, b;
-    cin >> a >> b;
-    ll x = a.size();
-    ll y = b.size();
-    string c = a;
-    string d = b;
-    asort(c);
-    asort(d);
-    if (x > y)
+    ll x, c = 0;
+    cin >> x;
+    ll y[x];
+    ll te[x];
+    for (ll i = 0; i < x; i++)
     {
-        for (ll i = 0; i < d.size(); i++)
+        cin >> y[i];
+        te[i] = y[i];
+    }
+    sort(te, te + x);
+    for (ll i = 0; i < x; i++)
+    {
+        if (y[i] != te[i])
         {
-            if (c[i] != d[i])
-            {
-                if (c[i + 1] == d[i])
-                {
-                    cout << "both" << nn;
-                    return;
-                }
-                // cout << a << nn;
-                // return;
-            }
-            else if (c[i] == d[i])
-            {
-                cout << "automaton" << nn;
-                return;
-            }
+            c++;
         }
     }
-    else if (x < y)
-    {
-        for (ll i = 0; i < d.size(); i++)
-        {
-            if (d[i] != c[i])
-            {
-                if (d[i + 1] == c[i])
-                {
-                    cout << "need tree" << nn;
-                    return;
-                }
-            }
-            else if (d[i] == c[i])
-            {
-                cout << "automaton" << nn;
-                return;
-            }
-        }
-    }
-    else if (x == y)
-    {
-        for (ll i = 0; i < c.size(); i++)
-        {
-            if (c[i] != d[i])
-            {
-                cout << "need tree" << nn;
-                return;
-            }
-            else if (c[i] == d[i])
-            {
-                cout << "array" << nn;
-                return;
-            }
-        }
-    }
+    cout << c / 2 << nn;
 }
 int main()
 {
     code();
-    // ll test;
-    // cin >> test;
+    ll test;
+    cin >> test;
     // while (test--)
-    // {
-    solve();
-    // }
+    for (ll i = 1; i <= test; i++)
+    {
+        testcase
+        solve();
+    }
     return 0;
 }

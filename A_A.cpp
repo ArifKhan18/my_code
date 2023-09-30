@@ -20,20 +20,21 @@
 using namespace std;
 void solve()
 {
-    ll x;
-    cin >> x;
-    ll y[x];
-    for (ll i = 0; i < x; i++)
+    ll x, y, c = 0;
+    cin >> x >> y;
+    ll a[y];
+    for (ll i = 0; i < y; i++)
     {
-        cin >> y[i];
+        cin >> a[i];
     }
-    set<ll> s;
-    for (ll i = 0; i < x; i++)
+    for (ll i = 0; i < y; i++)
     {
-        s.insert(y[i]);
+        if (a[i] + 2 != a[i + 1] - 1 and a[i] + 2 <= x or a[i] + 2 != a[i + 1] + 1 and a[i] + 2 <= x)
+        {
+            c++;
+        }
     }
-    ll q = s.size();
-    cout << q << nn;
+    cout << c << nn;
 }
 int main()
 {
@@ -43,6 +44,6 @@ int main()
     // while (test--)
     // {
     solve();
-    // }
+    //}
     return 0;
 }

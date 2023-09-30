@@ -23,27 +23,23 @@ void solve()
     ll x;
     cin >> x;
     ll y[x];
-    ll ans = 0;
     for (ll i = 0; i < x; i++)
     {
         cin >> y[i];
     }
-    for (ll i = 0; i < x; i++)
+    ll mn = 1e16;
+    for (ll i = 1; i < x; i++)
     {
-        ans = y[x - 1] - y[x - 2];
+        mn = min(mn, y[i] - y[i - 1]);
     }
-    // if (ans == 0)
-    // {
-    //     cout << "1" << nn;
-    // }
-    // else if (ans < 0)
-    // {
-    //     cout << "0" << nn;
-    // }
-    // else
-    // {
-    cout << abs(ceil((double)(ans + 1) / 2)) << nn;
-    // }
+    if (mn < 0)
+    {
+        cout << 0 << nn;
+        return;
+    }
+    ll ans = mn / 2;
+    ans++;
+    cout << ans << nn;
 }
 int main()
 {

@@ -20,10 +20,16 @@
 using namespace std;
 void solve()
 {
-    ll x, y, q = 0;
+    ll x, y;
     cin >> x >> y;
-    q = x + y;
-    cout << (q / 2) - 1 << nn;
+    if (y <= (x + 1) / 2)
+    {
+        cout << y * 2 - 1 << nn;
+    }
+    else
+    {
+        cout << (y - (x + 1) / 2) * 2 << nn;
+    }
 }
 int main()
 {

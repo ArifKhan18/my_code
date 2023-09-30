@@ -1,0 +1,1 @@
+{"name":"Local: 52lab","url":"d:\\my_code\\52lab.cpp","tests":[{"id":1695127904320,"input":"5\n10 4 +\n10 4 ­-\n10 4 %\n10 4 /\n10 4 *","output":"Case 1: 14\nCase 2: 6\nCase 3: 2\nCase 4: 2\nCase 5: 40"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\my_code\\52lab.cpp","group":"local","local":true}
