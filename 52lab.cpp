@@ -1,58 +1,28 @@
-/*
-**  Bismillahir Rahmanir Rahim
-**  Author: MD. ARIF KHAN
-**  Bangladesh University of Business and Technology,(BUBT)
-**  Department of Computer Science And Engineering
-*/
 #include <bits/stdc++.h>
-#define nn "\n"
-#define ll long long
-#define yes cout << "YES\n";
-#define no cout << "NO\n";
-#define sp " "
-#define asort(a) sort(a.begin(), a.end())
-#define point(a) fixed << setprecision(a)
-#define pi 3.1415926535897932384626433832795
-#define code()                    \
-    ios_base::sync_with_stdio(0); \
-    cin.tie(0);                   \
-    cout.tie(0)
 using namespace std;
-void solve()
-{
-    ll a, b;
-    string s;
-    cin >> a >> b >> s;
-    if (s == "+")
-    {
-        cout << a + b << nn;
-    }
-    else if (s == "-")
-    {
-        cout << a - b << nn;
-    }
-    else if (s == "%")
-    {
-        cout << a % b << nn;
-    }
-    else if (s == "/")
-    {
-        cout << a / b << nn;
-    }
-    else if (s == "*")
-    {
-        cout << a * b << nn;
-    }
-}
-int main()
-{
-    code();
-    ll test;
-    cin >> test;
-    for (ll i = 1; i <= test; i++)
-    {
-        cout << "Case " << i << ": ";
-        solve();
-    }
-    return 0;
+//-------------------------------------------------------------------------------//
+#define nn "\n"
+#define all(x) (x).begin(), (x).end()
+#define point(x) fixed << setprecision(x)
+#define FastIo                  \
+  ios_base::sync_with_stdio(0); \
+  cin.tie(0);
+//-------------------------------------------------------------------------------//
+using ll = long long;
+using ull = unsigned long long;
+using ld = long double;
+//-------------------------------------------------------------------------------//
+const ld pi = acos(-1);
+const ll mod = 1e9 + 7;
+const ll mxn = 1e5 + 5;
+//-------------------------------------------------------------------------------//
+void solve() { cout << "Hello World\n"; }
+int main() {
+  FastIo;
+  int test = 1;
+  // cin >> test;
+  while (test--) {
+    solve();
+  }
+  return 0;
 }
